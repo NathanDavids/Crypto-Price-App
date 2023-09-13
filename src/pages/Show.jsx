@@ -56,6 +56,9 @@ export default function Show() {
         store.fetchData(params.id)
     }, []) 
 
+   
+
+    
   return (
     <div>
         <AreaChart
@@ -77,4 +80,5 @@ export default function Show() {
         </AreaChart>
     </div>
   )
-}
+};
+ 
