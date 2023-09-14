@@ -61,6 +61,7 @@ export default function Show() {
     
   return (
     <div>
+      {store.data && store.data.image && <img src={store.data.image.large}/>}
       {store.data && store.data.name && <h2>{store.data.name}</h2>}
         <AreaChart
             width={500}
@@ -81,27 +82,27 @@ export default function Show() {
         </AreaChart>
         <div>
           <h4>Market Cap Rank</h4>
-          <span># {store.data.market_cap_rank}</span>
+          {store.data.market_data && store.data.market_data.market_cap_rank &&<span># {store.data.market_cap_rank}</span>}
         </div>
         <div>
           <h4>24h High</h4>
-          <span>R{store.data.market_data.high_24h.zar}</span>
+          {store.data.market_data && store.data.market_data.high_24h &&<span>R{store.data.market_data.high_24h.zar}</span>}
         </div>
         <div>
           <h4>24h Low</h4>
-          <span>R{store.data.market_data.low_24h.zar}</span>
+          {store.data.market_data && store.data.market_data.low_24h &&<span>R{store.data.market_data.low_24h.zar}</span>}
         </div>
         <div>
           <h4>Circulating Supply</h4>
-          <span>R{store.data.market_data.circulating_supply}</span>
+          {store.data.market_data && store.data.market_data.circulating_supply &&<span>R{store.data.market_data.circulating_supply}</span>}
         </div>
         <div>
           <h4>Current Price</h4>
-          <span>R{store.data.market_data.current_price.zar}</span>
+          {store.data.market_data && store.data.market_data.current_price &&<span>R{store.data.market_data.current_price.zar}</span>}
         </div>
         <div>
           <h4>1y Change</h4>
-          <span>{store.data.market_data.price_change_percentage_1y.toFixed(2)}%</span>
+          {store.data.market_data && store.data.market_data.price_change_percentage_1y &&<span>{store.data.market_data.price_change_percentage_1y.toFixed(2)}%</span>}
         </div>
     </div>
   )
