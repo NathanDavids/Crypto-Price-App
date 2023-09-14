@@ -3,6 +3,7 @@ import '../main'
 import homeStore from '../stores/homeStore'
 import { Link } from 'react-router-dom'
 import Header from '../components/Header'
+import ListItem from '../components/ListItem'
 
 export default function Home() {
     const store = homeStore()
@@ -20,15 +21,18 @@ export default function Home() {
                 <input type='text' value={store.query} onChange={store.setQuery}/>
                 </div>
             </header>
-            {store.coins.map(coin => {
-                return (
-                    <div key={coin.id}>
-                        <Link to={`/${coin.id}`}>
-                            {coin.name}
-                        </Link>
+            <div className='home-crypto'>
+                <div className='width'>
+                    <h2>Trending Crypto</h2>
+                    <div className="home-border-list">
+                    {store.coins.map(coin => {
+                        return (
+                    <   ListItem key={coin.id} coin={coin} />
+                        )
+                    })}
                     </div>
-                )
-            })}
+                </div>
+            </div>
         </div>
     )
 }
