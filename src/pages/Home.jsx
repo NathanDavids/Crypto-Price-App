@@ -10,7 +10,7 @@ export default function Home() {
     const store = homeStore()
 
     React.useEffect(() => {
-        store.fetchCoins()
+        if (store.trending.length === 0) store.fetchCoins()
     }, [])
     
     return (
@@ -27,7 +27,7 @@ export default function Home() {
             </header>
             <div className='home-crypto'>
                 <div className='width'>
-                    <h2>Trending Crypto</h2>
+                    <h2>{store.searched ? "Search Results" : "Trending Coins"}</h2>
                     <div className="home-border-list">
                     {store.coins.map(coin => {
                         return (

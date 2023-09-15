@@ -55,6 +55,10 @@ export default function Show() {
 
     React.useEffect(() => {
         store.fetchData(params.id)
+
+        return () => {
+          store.reset();
+        }
     }, []) 
 
    
@@ -63,6 +67,8 @@ export default function Show() {
   return (
     <div>
       <Header back />
+      {store.data && (
+        <>
       <header className='show-header'>
       {store.data && store.data.image && <img src={store.data.image.large}/>}
       {store.data && store.data.name && <h2>{store.data.name}</h2>}
@@ -118,6 +124,8 @@ export default function Show() {
         </div>
         </div>
         </div>
+        </>
+        )}
     </div>
   )
 };
