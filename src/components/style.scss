@@ -78,6 +78,17 @@ h1 a {
     }
 }
 
+.home-search-input{
+    position: relative;
+
+    svg{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 16px;
+    }
+}
+
 .home-crypto{
     padding-bottom: 60px;
     h2{
