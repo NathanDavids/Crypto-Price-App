@@ -18,7 +18,9 @@ export default function Home() {
             <header className='home-search'>
                 <div className="width">
                 <h2> Search for a coin </h2>
+                <div className='home-search-input'>
                 <input type='text' value={store.query} onChange={store.setQuery}/>
+                </div>
                 </div>
             </header>
             <div className='home-crypto'>
