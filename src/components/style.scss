@@ -80,18 +80,10 @@ h1 a {
 
 @keyframes rotating{
     from{
-        -ms-transform: rotate(0deg);
-        -moz-transform: rotate(0deg);
-        -webkit-transform: rotate(0deg);
-        -o-transform: rotate(0deg);
-        transform: rotate(0deg);
+        transform: translateY(-50%); transform: rotate(0deg);
     }
     to{
-        -ms-transform: rotate(160deg);
-        -moz-transform: rotate(160deg);
-        -webkit-transform: rotate(160deg);
-        -o-transform: rotate(160deg);
-        transform: rotate(160deg);
+        transform: translateY(-50%); transform: rotate(360deg);
     }
 }
 
@@ -100,9 +92,16 @@ h1 a {
 
     svg{
         position: absolute;
-        top: 50%;
+        top: 30%;
         transform: translateY(-50%);
-        right: 16px;
+        right: 24px;
+        animation: 2s rotating infinite linear;
+        opacity: 0;
+        transition: 0.2s opacity;
+    }
+
+    &.searching svg{
+        opacity: 1;
     }
 }
 
