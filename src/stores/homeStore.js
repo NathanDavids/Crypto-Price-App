@@ -50,7 +50,7 @@ const homeStore = create((set) => ({
             image: coins.item.large,
             id: coins.item.id,
             priceBtc: coins.item.price_btc.toFixed(10),
-            priceZar: (coins.item.price_btc * btcPrice).toFixed(10),
+            priceZar: (coins.item.price_btc * btcPrice).toFixed(2),
         }
     })
 

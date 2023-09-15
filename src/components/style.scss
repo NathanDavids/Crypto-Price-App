@@ -45,8 +45,8 @@ h1{
     text-align: center;
     color: white;
     text-transform: uppercase;
-    font-size: 20px;
-    letter-spacing: 2px;
+    font-size: 30px;
+    letter-spacing: 4px;
 }
 
 h1 a {
@@ -141,10 +141,10 @@ h1 a {
 
 .home-crypto-btc{
     color: #111;
-    font-size: 16px;
+    font-size: 17px;
 
     img{
-        width: 16px;
+        width: 17px;
         display: inline-block;
         margin: -3px 5px 0 0;
         vertical-align: middle;
@@ -153,7 +153,9 @@ h1 a {
 
 .home-crypto-zar{
     color: #666;
-    font-size: 10px;
+    font-size: 12px;
+    margin-top: 3px;
+    margin-left: 74%;
 }
 
 .home-border-list{
